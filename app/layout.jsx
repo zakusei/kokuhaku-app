@@ -10,10 +10,7 @@ const RootLayout = ({ children }) => {
             <header className='fixed inset-x-0 top-0 bg-neutral-900'>
                 <Navbar/>
             </header>
-            <main className='container mx-auto'>
-                { children }
-                <Messages/>
-            </main>
+            { children }
             <Footer/>
         </body>
     </html>
