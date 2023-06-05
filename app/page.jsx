@@ -43,7 +43,7 @@ const Home = () => {
           Thank you for your cooperation in making this a welcoming 
           space for everyone.</p>
 
-          <Link href={"/new/"} className="btn bg-neutral-800 hover:bg-gray-50 hover:text-neutral-900 py-2 px-6 rounded-lg w-30 mx-auto">
+          <Link href={"/new/"} className="btn bg-neutral-800 hover:bg-gray-50 hover:text-neutral-900 py-3 px-6 rounded-lg w-30 mx-auto">
           <span>
           <FontAwesomeIcon icon={faPenToSquare}/> </span>
           Write Message</Link>
