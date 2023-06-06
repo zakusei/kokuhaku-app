@@ -1,9 +1,11 @@
 'use client'
 import Messages from "@components/Messages";
 import Link from "next/link";
+
+// CSS Libraries
+import Typewriter from "typewriter-effect";
 import "@fortawesome/fontawesome-svg-core/styles.css"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Typewriter from "typewriter-effect";
 import {
     faPenToSquare
   } from "@fortawesome/free-regular-svg-icons";
@@ -30,12 +32,12 @@ const Home = () => {
               }}
               />
           </div>
-          <p className="mb-10">
+          <p className="mb-10 font-cutive">
           Welcome to our online community where you can 
           express yourself <span className="text-neutral-700"> anonymously.</span> Share your <span className="text-neutral-700">thoughts, 
           feelings, and experiences </span> with others without fear 
           of judgment.</p>
-          <p className="mb-10 hidden lg:inline-block md:inline-block">
+          <p className="mb-10 hidden font-cutive lg:inline-block md:inline-block">
           Please note that <span className="text-red-500">bullying, harassment, or any other 
           form of abusive behavior</span>  towards others will not be 
           tolerated on this platform. We take this rule seriously 
@@ -43,7 +45,7 @@ const Home = () => {
           Thank you for your cooperation in making this a welcoming 
           space for everyone.</p>
 
-          <Link href={"/new/"} className="btn bg-neutral-800 hover:bg-gray-50 hover:text-neutral-900 py-3 px-6 rounded-lg w-30 mx-auto">
+          <Link href={"/new/"} className="btn font-cutive bg-neutral-800 hover:bg-gray-50 hover:text-neutral-900 py-3 px-6 rounded-lg w-30 mx-auto">
           <span>
           <FontAwesomeIcon icon={faPenToSquare}/> </span>
           Write Message</Link>
@@ -55,6 +57,7 @@ const Home = () => {
               </button>
           </div>
       </section>
+      
       <Messages/>
     </main>
 

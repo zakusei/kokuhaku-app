@@ -1,6 +1,5 @@
 import '@styles/globals.css';
 import Navbar from '@components/Navbar';
-import Messages from '@components/Messages';
 import Footer from '@components/Footer';
 
 const RootLayout = ({ children }) => {

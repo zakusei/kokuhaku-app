@@ -1,26 +1,22 @@
 'use client'
+import {signIn, signOut, useSession, getProviders } from "next-auth/react";
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
+
+// CSS Imports
 import "@fortawesome/fontawesome-svg-core/styles.css"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { config } from "@fortawesome/fontawesome-svg-core";
-
-// import {
-//   faArrowRight,
-// } from "@fortawesome/free-regular-svg-icons";
 import {
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
-
-import Link from "next/link";
-
 config.autoAddCss = false; 
 
-import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const path = usePathname();
-  console.log(path);
+  const isUserLoggedIn = true;
   return (
     <nav className='flex justify-around mx-auto text-gray p-6 font-cutive text-gray-50'>
         <div className='font-bold'><Link href={"https://github.com/zakusei/"}>Zakusei<span className='text-red-600'>.dev</span></Link></div>
