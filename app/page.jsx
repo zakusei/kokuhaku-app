@@ -10,6 +10,8 @@ import {
     faPenToSquare
   } from "@fortawesome/free-regular-svg-icons";
 import {
+    faArrowLeft,
+    faArrowRight,
     faMagnifyingGlass,
   } from "@fortawesome/free-solid-svg-icons";
 
@@ -34,7 +36,7 @@ const Home = () => {
           </div>
           <p className="mb-10 font-cutive">
           Welcome to our online community where you can 
-          express yourself <span className="text-neutral-700"> anonymously.</span> Share your <span className="text-neutral-700">thoughts, 
+          express yourself <span className="text-neutral-400"> anonymously.</span> Share your <span className="text-neutral-400">thoughts, 
           feelings, and experiences </span> with others without fear 
           of judgment.</p>
           <p className="mb-10 hidden font-cutive lg:inline-block md:inline-block">
@@ -45,7 +47,7 @@ const Home = () => {
           Thank you for your cooperation in making this a welcoming 
           space for everyone.</p>
 
-          <Link href={"/new/"} className="btn bg-neutral-800 hover:bg-gray-50 hover:text-neutral-900 py-3 px-6 rounded-lg w-30 mx-auto">
+          <Link href={"/new/"} className="btn bg-neutral-800 hover:bg-neutral-700 py-3 px-6 rounded-xl w-30 mx-auto">
           <span>
           <FontAwesomeIcon icon={faPenToSquare}/> </span>
           Write Message</Link>
@@ -57,8 +59,29 @@ const Home = () => {
               </button>
           </div>
       </section>
-      
+
       <Messages/>
+
+      {/* Pagination */}
+      <div className="container mx-auto -mt-12 mb-12 w-full">
+          <div className="flex justify-center text-white">
+            <span className="bg-neutral-800 px-4 py-3 rounded-l-xl h-full hover:bg-neutral-700">
+              <Link href={"/"}><FontAwesomeIcon icon={faArrowLeft}/></Link>
+            </span>
+            <span className="bg-neutral-800 px-4 py-3 h-full hover:bg-neutral-700">
+              <Link href={"/"}>1</Link>
+            </span>
+            <span className="bg-neutral-700 px-4 py-3 h-full hover:bg-neutral-700">
+              <Link href={"/"}>2</Link>
+            </span>
+            <span className="bg-neutral-800 px-4 py-3 h-full hover:bg-neutral-700">
+              <Link href={"/"}>3</Link>
+            </span>
+            <span className="bg-neutral-800 px-4 py-3 rounded-r-xl h-full hover:bg-neutral-700">
+              <Link href={"/"}><FontAwesomeIcon icon={faArrowRight}/></Link>
+            </span>
+          </div>
+      </div>
     </main>
 
   )
