@@ -2,7 +2,7 @@
 
 const Messages = () => {
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-24">
+    <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-24">
       <div className={`h-96 w-full font-cutive bg-neutral-800 rounded-lg`}>
           <div className="mt-6 ml-6 inline flex text-white text-xl">
               <h1 className="px-2 py-4 outline-0 font-bold">Lorem Ipsum</h1>

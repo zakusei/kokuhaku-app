@@ -1,6 +1,6 @@
 import '@styles/globals.css';
 import Navbar from '@components/Navbar';
-import Footer from '@components/Footer';
+// import Footer from '@components/Footer';
 
 const RootLayout = ({ children }) => {
   return (
@@ -10,7 +10,7 @@ const RootLayout = ({ children }) => {
                 <Navbar/>
             </header>
             { children }
-            <Footer/>
+            {/* <Footer/> */}
         </body>
     </html>
   )
