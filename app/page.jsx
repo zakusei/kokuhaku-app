@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <main className="container mx-auto">
       <section className="container mx-auto text-white font-cutive text-center w-3/4 justify-center">
-          <div className="lg:text-6xl md:text-5xl text-5xl text-cutive mx-auto mt-40 text-gray-50 mb-10">
+          <div className="lg:text-6xl md:text-5xl text-5xl font-cutive mx-auto mt-40 text-gray-50 mb-10">
               <Typewriter 
               onInit={(typewriter) => {
                   typewriter
@@ -45,7 +45,7 @@ const Home = () => {
           Thank you for your cooperation in making this a welcoming 
           space for everyone.</p>
 
-          <Link href={"/new/"} className="btn font-cutive bg-neutral-800 hover:bg-gray-50 hover:text-neutral-900 py-3 px-6 rounded-lg w-30 mx-auto">
+          <Link href={"/new/"} className="btn bg-neutral-800 hover:bg-gray-50 hover:text-neutral-900 py-3 px-6 rounded-lg w-30 mx-auto">
           <span>
           <FontAwesomeIcon icon={faPenToSquare}/> </span>
           Write Message</Link>
