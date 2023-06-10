@@ -34,20 +34,13 @@ const Home = () => {
               }}
               />
           </div>
-          <p className="mb-10 font-cutive">
+          <p className="mb-10 font-cutive text-2xl">
           Welcome to our online community where you can 
           express yourself <span className="text-neutral-400"> anonymously.</span> Share your <span className="text-neutral-400">thoughts, 
           feelings, and experiences </span> with others without fear 
           of judgment.</p>
-          <p className="mb-10 hidden font-cutive lg:inline-block md:inline-block">
-          Please note that <span className="text-red-500">bullying, harassment, or any other 
-          form of abusive behavior</span>  towards others will not be 
-          tolerated on this platform. We take this rule seriously 
-          to ensure the safety and well-being of all our users. 
-          Thank you for your cooperation in making this a welcoming 
-          space for everyone.</p>
 
-          <Link href={"/new/"} className="btn bg-neutral-800 hover:bg-neutral-700 py-3 px-6 rounded-xl w-30 mx-auto">
+          <Link href={"/new-message"} className="btn bg-neutral-800 hover:bg-neutral-700 py-3 px-6 rounded-xl w-30 mx-auto">
           <span>
           <FontAwesomeIcon icon={faPenToSquare}/> </span>
           Write Message</Link>
@@ -65,21 +58,11 @@ const Home = () => {
       {/* Pagination */}
       <div className="container mx-auto -mt-12 mb-12 w-full">
           <div className="flex justify-center text-white">
-            <span className="bg-neutral-800 px-4 py-3 rounded-l-xl h-full hover:bg-neutral-700">
-              <Link href={"/"}><FontAwesomeIcon icon={faArrowLeft}/></Link>
-            </span>
-            <span className="bg-neutral-800 px-4 py-3 h-full hover:bg-neutral-700">
-              <Link href={"/"}>1</Link>
-            </span>
-            <span className="bg-neutral-700 px-4 py-3 h-full hover:bg-neutral-700">
-              <Link href={"/"}>2</Link>
-            </span>
-            <span className="bg-neutral-800 px-4 py-3 h-full hover:bg-neutral-700">
-              <Link href={"/"}>3</Link>
-            </span>
-            <span className="bg-neutral-800 px-4 py-3 rounded-r-xl h-full hover:bg-neutral-700">
-              <Link href={"/"}><FontAwesomeIcon icon={faArrowRight}/></Link>
-            </span>
+            <Link className="bg-neutral-800 px-4 py-3 rounded-l-xl h-full hover:bg-neutral-700" href={"/"}><FontAwesomeIcon icon={faArrowLeft}/></Link>
+            <Link className="bg-neutral-800 px-4 py-3 h-full hover:bg-neutral-700" href={"/"}>1</Link>
+            <Link className="bg-neutral-700 px-4 py-3 h-full hover:bg-neutral-700" href={"/"}>2</Link>
+            <Link className="bg-neutral-800 px-4 py-3 h-full hover:bg-neutral-700" href={"/"}>3</Link>
+            <Link className="bg-neutral-800 px-4 py-3 rounded-r-xl h-full hover:bg-neutral-700" href={"/"}><FontAwesomeIcon icon={faArrowRight}/></Link>
           </div>
       </div>
     </main>

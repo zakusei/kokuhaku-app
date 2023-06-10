@@ -42,7 +42,7 @@ const NewMessage = () => {
             <FontAwesomeIcon icon={faArrowLeft}/> </span>
             Back to Home</Link>
         <section>
-            <p class="m-5 text-white font-cutive">
+            <p class="m-5 text-white font-cutive text-xl">
                 Please note that <span class="text-red-400">bullying, harassment, or any other form of abusive</span> behavior towards others will not be tolerated on this platform. We take this rule seriously to ensure the safety and well-being of all our users.
                 Thank you for your cooperation in making this a welcoming space for everyone.
             </p>
