@@ -1,6 +1,4 @@
 'use client'
-import Messages from "@components/Messages";
-import Link from "next/link";
 
 // CSS Libraries
 import Typewriter from "typewriter-effect";
@@ -14,6 +12,11 @@ import {
     faArrowRight,
     faMagnifyingGlass,
   } from "@fortawesome/free-solid-svg-icons";
+
+import Messages from "@components/Messages";
+import Link from "next/link";
+
+
 
 const Home = () => {
   return (
@@ -66,7 +69,6 @@ const Home = () => {
           </div>
       </div>
     </main>
-
   )
 }
 
