@@ -13,12 +13,63 @@ import {
     faMagnifyingGlass,
   } from "@fortawesome/free-solid-svg-icons";
 
-import Messages from "@components/Messages";
+import Message from "@components/Message";
 import Link from "next/link";
 
 
 
 const Home = () => {
+  let messages = [
+    {
+      id: 1,
+      color: "sky",
+      recipient: "Lorem Ipsum",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices. Est velit egestas dui id ornare.`
+    },
+    {
+      id: 2,
+      color: "violet",
+      recipient: "Lorem Ipsum",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices. Est velit egestas dui id ornare.`
+    },
+    {
+      id: 3,
+      color: "purple",
+      recipient: "Lorem Ipsum",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices. Est velit egestas dui id ornare.`
+    },
+    {
+      id: 4,
+      color: "fuchsia",
+      recipient: "Lorem Ipsum",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices. Est velit egestas dui id ornare.`
+    },
+    {
+      id: 5,
+      color: "pink",
+      recipient: "Lorem Ipsum",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices. Est velit egestas dui id ornare.`
+    },
+    {
+      id: 6,
+      color: "orange",
+      recipient: "Lorem Ipsum",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices. Est velit egestas dui id ornare.`
+    },
+    {
+      id: 7,
+      color: "sky",
+      recipient: "Lorem Ipsum",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices. Est velit egestas dui id ornare.`
+    },
+    {
+      id: 8,
+      color: "yellow",
+      recipient: "Lorem Ipsum",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices. Est velit egestas dui id ornare.`
+    },
+  ];
+
   return (
     <main className="container mx-auto">
       <section className="container mx-auto text-white font-cutive text-center w-3/4 justify-center">
@@ -56,7 +107,12 @@ const Home = () => {
           </div>
       </section>
 
-      <Messages/>
+      {/* Query Messages */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-24">
+        {messages.map((message) => (
+          <Message message={message}/>
+        ))}
+      </div>
 
       {/* Pagination */}
       <div className="container mx-auto -mt-12 mb-12 w-full">
