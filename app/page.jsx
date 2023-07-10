@@ -1,7 +1,7 @@
 'use client'
 
 // CSS Libraries
-import Typewriter from "typewriter-effect";
+import TypewriterComponent from "@components/Typewrite";
 import "@fortawesome/fontawesome-svg-core/styles.css"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,10 +12,10 @@ import {
     faArrowRight,
     faMagnifyingGlass,
   } from "@fortawesome/free-solid-svg-icons";
-
+  
+import Typewrite from "@components/Typewrite";
 import Message from "@components/Message";
 import Link from "next/link";
-
 
 
 const Home = () => {
@@ -74,20 +74,9 @@ const Home = () => {
     <main className="container mx-auto">
       <section className="container mx-auto text-white font-cutive text-center w-3/4 justify-center">
           <div className="lg:text-6xl md:text-5xl text-5xl font-cutive mx-auto mt-40 text-gray-50 mb-10">
-              <Typewriter 
-              onInit={(typewriter) => {
-                  typewriter
-                      .typeString("黒白の手紙")
-                      .pauseFor(1000)
-                      .deleteAll()
-                      .typeString("Kokuhaku No Tegami")
-                      .pauseFor(1000)
-                      .deleteAll()
-                      .typeString("Anonymous Messages")
-                      .start();
-              }}
-              />
+            <Typewrite/>
           </div>
+          
           <p className="mb-10 font-cutive text-2xl">
           Welcome to our online community where you can 
           express yourself <span className="text-neutral-400"> anonymously.</span> Share your <span className="text-neutral-400">thoughts, 
@@ -109,8 +98,8 @@ const Home = () => {
 
       {/* Query Messages */}
       <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-24">
-        {messages.map((message) => (
-          <Message message={message}/>
+        {messages.map((message, index) => (
+          <Message key={index} message={message}/>
         ))}
       </div>
 

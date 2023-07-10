@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 // CSS Libraries
-import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faPenToSquare
@@ -13,6 +12,8 @@ import {
     faArrowLeft
   } from "@fortawesome/free-solid-svg-icons";
 
+import Typewrite from "@components/Typewrite";
+
 const NewMessage = () => {
 
     const [ currentColor, setColor ] = useState(`neutral`);
@@ -20,22 +21,14 @@ const NewMessage = () => {
         setColor(`${color}`);
     }
 
-  return (
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
+    return (
     <main className="container mx-auto text-center font-cutive text-white">
         <section className="lg:text-6xl md:text-5xl text-5xl font-cutive mx-auto mt-40 text-gray-50 mb-10">
-            <Typewriter 
-            onInit={(typewriter) => {
-                typewriter
-                    .typeString("黒白の手紙")
-                    .pauseFor(1000)
-                    .deleteAll()
-                    .typeString("Kokuhaku No Tegami")
-                    .pauseFor(1000)
-                    .deleteAll()
-                    .typeString("Anonymous Messages")
-                    .start();
-            }}
-            />
+            <Typewrite/>
         </section>
         <Link href={"/"} className="bg-neutral-800 text-white hover:bg-neutral-700 px-6 py-3 rounded-xl">
             <span>
@@ -50,7 +43,7 @@ const NewMessage = () => {
         <section className="mx-auto flex justify-center text-white">
             <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2">
                 {/* Canvas */}
-                <div className={`bg-${currentColor}-800 h-96 w-96 rounded-xl`}>
+                <form onSubmit={handleSubmit} className={`bg-${currentColor}-800 h-96 w-96 rounded-xl`}>
                     <div className="ml-2 mr-2">
                         <div className="flex ml-2 mt-2 text-lg">
                             <input type="text" className="bg-transparent px-4 py-4 outline-0" placeholder="Enter recipients name" />
@@ -63,7 +56,7 @@ const NewMessage = () => {
                             rows="10">
                         </textarea>
                     </div>
-                </div>
+                </form>
                 {/* Color Pallete */}
                 <div className="container">
                     <div className="grid grid-cols-2 gap-x-4 gap-y-4">
