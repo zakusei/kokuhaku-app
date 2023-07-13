@@ -1,5 +1,5 @@
 'use client'
-// CSS Imports
+// Icons
 import "@fortawesome/fontawesome-svg-core/styles.css"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -13,17 +13,18 @@ import {
 
 
 
-
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from "react";
-config.autoAddCss = false; 
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession, signIn, signOut, getProviders } from 'next-auth/react';
+
+
 
 const Navbar = () => {
   const path = usePathname();
   const isUserLoggedIn = false;
-  // const { data: session } = useSession();
+  
+
   return (
     <nav className='fixed inset-x-0 top-0 bg-neutral-900 flex justify-around mx-auto text-gray p-6 font-cutive text-gray-50'>
         <div className='font-bold'><Link href={"https://github.com/zakusei/"}>Zakusei<span className='text-red-600'>.dev</span></Link></div>
@@ -41,12 +42,16 @@ const Navbar = () => {
             </button>
           ):(
             <>
-              <button 
+
+              <Link
+                type="button" 
                 className='font-bold hover:text-neutral-400'
-                onClick={() => signIn()}
-              >
-                <FontAwesomeIcon icon={faSignOut}/><span className=''> Sign In</span>
-              </button>
+                href={"/login"}
+                >
+
+                  <FontAwesomeIcon icon={faSignOut}/><span className=''> Sign In</span>
+              </Link>
+
             </>
           )}
         </div>
